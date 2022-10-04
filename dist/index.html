@@ -5,15 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./lib/iconfont.css">
-    <link rel="stylesheet" href="./sass/cart_index.scss">
-    <link rel="stylesheet" href="./sass/_public.scss">
-    <!-- <style>
-        .totals{
-            width: 210px;
-            text-align: center;
-        }
-    </style> -->
+    <link rel="stylesheet" href="./lib/font/iconfont.css">
+    <link rel="stylesheet" href="./css/cart_index.min.css">
+    <script src="./lib/jquery-1.12.4.js"></script>
+    <script src="./lib/jquery.cookie.js"></script>
 </head>
 <body>
     <header>
@@ -55,8 +50,8 @@
             <!-- 未登录 -->
             <div class="h-empty-right">
                <p><a href="">我的订单</a></p>
-               <p><a href="">登录</a></p>
-               <p><a href="">注册</a></p> 
+               <p><a href="">登录</a></p><!--跳转登录页-->
+               <p><a href="">注册</a></p> <!--跳转注册页-->
             </div>
 
         </div>
@@ -70,7 +65,7 @@
                     <div class="empty-title">您还没有登录！
                     </div>
                     <div class="cart-empty-desc">登录后可显示您账号中已加入的商品哦~</div>
-                    <div class="tips-btn"><a href="">去登录</a></div>
+                    <div class="tips-btn"><a href="">去登录</a></div><!--跳转登录页-->
                 </div> 
             </div>
             
@@ -160,41 +155,41 @@
         <div class="f-center">
             <div class="f-c-header">
                 <ul class="service">
-                    <li><a href="./html/1.html"><img src="./img/cart-2.png" alt=""><span>满80免运费</span></a></li>
-                    <li><a href="./html/2.html"><img src="./img/cart-3.png" alt=""><span>100+ 城市次日达</span></a></li>
-                    <li><a href="./html/3.html"><img src="./img/cart-04.png" alt=""><span>7天无理由退货</span></a></li>
-                    <li><a href="./html/4.html"><img src="./img/cart-5.png" alt=""><span>15天换货保障</span></a></li>
-                    <li><a href="./html/5.html"><img src="./img/cart-6.png" alt=""><span>1年免费保修</span></a></li>
-                    <li><a href="./html/6.html"><img src="./img/cart-7.png" alt=""><span>上门快修</span></a></li>
+                    <li><a href="https://service.meizu.com/help/delivery.html"><img src="./img/cart-2.png" alt=""><span>满80免运费</span></a></li>
+                    <li><a href="https://store.meizu.com/marrive/summary.html"><img src="./img/cart-3.png" alt=""><span>100+ 城市次日达</span></a></li>
+                    <li><a href="https://service.meizu.com/help/after_ser.html#policy1"><img src="./img/cart-04.png" alt=""><span>7天无理由退货</span></a></li>
+                    <li><a href="https://service.meizu.com/help/after_ser.html#policy2"><img src="./img/cart-5.png" alt=""><span>15天换货保障</span></a></li>
+                    <li><a href="https://service.meizu.com/help/after_ser.html#policy3"><img src="./img/cart-6.png" alt=""><span>1年免费保修</span></a></li>
+                    <li><a href="https://service.meizu.com/repair/home.html"><img src="./img/cart-7.png" alt=""><span>上门快修</span></a></li>
                 </ul>
                 <div class="online">
                     <span>周一至周日 8:00-20:00</span>
                     <p class="tel">400-788-3333</p>
-                    <a href="">在线客服</a>
+                    <a href="https://crmonline.meizu.com/FS_WEB_IM/mz_websocket.html?live-service=">在线客服</a>
                 </div>
             </div>
             <hr>
             <div class="f-c-footer">
                 <div class="f-row1">
                     <ul class="links">
-                        <li><a href="#">了解魅族</a></li>
-                        <li><a href="">加入我们</a></li>
-                        <li><a href="">联系我们</a></li>
-                        <li><a href="">线下专卖店</a></li>
-                        <li><a href="">线上销售授权名单</a></li>
-                        <li><a href="">问题反馈</a></li>
-                        <li><a href="">涉网络暴力有害信息举报</a></li>
-                        <li><a href="">涉未成年人网络有害信息举报</a></li>
-                        <li><a href="">涉养老诈骗有害信息举报</a></li>
+                        <li><a href="https://www.meizu.com/about.html#know">了解魅族</a></li>
+                        <li><a href="http://hr.meizu.com/">加入我们</a></li>
+                        <li><a href="https://www.meizu.com/about.html#contact">联系我们</a></li>
+                        <li><a href="https://service.meizu.com/retail/index.html">线下专卖店</a></li>
+                        <li><a href="https://www.meizu.com/authorization/index.html">线上销售授权名单</a></li>
+                        <li><a href="https://www.meizu.com/feedback.html">问题反馈</a></li>
+                        <li><a href="http://www.gdjubao.cn/jb/Acceptance/swlblyhxx/">涉网络暴力有害信息举报</a></li>
+                        <li><a href="http://www.gdjubao.cn/jb/?harm_type=18">涉未成年人网络有害信息举报</a></li>
+                        <li><a href="http://www.gdjubao.cn/jb/Acceptance/sylzpyhxx/">涉养老诈骗有害信息举报</a></li>
                         <li style="border: none;" id="china">
                             <img src="./img/cart-21.png" alt="">
-                            简体中文
+                            <a href="#">简体中文</a>
                             <ul class="nation">
-                                <li><a href=""><img src="./img/cart-21.png" alt=""><span>简体中文</span></a></li>
-                                <li><a href=""><img src="./img/cart-22.png" alt=""><span>繁體中文</span></span></a></li>
-                                <li><a href=""><img src="./img/cart-23.png" alt=""><span>English</span></a></li>
-                                <li><a href=""><img src="./img/cart-24.png" alt=""><span>Русский</span></a></li>
-                                <li><a href=""><img src="./img/cart-25.png" alt=""><span>Türkiye</span></a></li>
+                                <li><a href=""><img src="./img/cart-21.png" alt=""><span>简体中文</span></a></li><!-- 这里跳转首页-->
+                                <li><a href="https://www.meizu.com/hk"><img src="./img/cart-22.png" alt=""><span>繁體中文</span></span></a></li>
+                                <li><a href="https://www.meizu.com/en"><img src="./img/cart-23.png" alt=""><span>English</span></a></li>
+                                <li><a href="https://www.meizu.com/ru/"><img src="./img/cart-24.png" alt=""><span>Русский</span></a></li>
+                                <li><a href="https://www.meizu-tr.com/"><img src="./img/cart-25.png" alt=""><span>Türkiye</span></a></li>
                             </ul>
                             
                         </li>
@@ -212,20 +207,17 @@
                 </div>
                 <div class="f-row2">
                     <div style="display: flex;justify-content:space-between;">
-                        <a href=""><span class="iconfont icon-xiaochengxu"></span><img src="./img/cart-11.png" alt=""></a>
-                        <a href=""><span class="iconfont icon-weixin"></span><img src="./img/cart-12.jpg" alt=""></a>
-                        <a href=""><span class="iconfont icon-qzone"></span></a>
-                        <a href=""><span class="iconfont icon-weibo"></span></span></a>
+                        <a href="#"><span class="iconfont icon-xiaochengxu"></span><img src="./img/cart-11.png" alt=""></a>
+                        <a href="#"><span class="iconfont icon-weixin"></span><img src="./img/cart-12.jpg" alt=""></a>
+                        <a href="https://user.qzone.qq.com/2762957059"><span class="iconfont icon-qzone"></span></a>
+                        <a href="https://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=https%3A%2F%2Fweibo.com%2Fmeizumobile&domain=.weibo.com&sudaref=https%3A%2F%2Fcart.meizu.com%2F&ua=php-sso_sdk_client-0.6.36&_rand=1664885303.7026"><span class="iconfont icon-weibo"></span></span></a>
                     </div>
                     
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./js/cart_login.min.js"></script>
+    <script src="./js/cart_index.min.js"></script>
 </body>
-    <script></script>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/jquery.cookie.js"></script>
-    <script src="./js/cart_login.js"></script>
-    <script src="./js/cart_index.js"></script>
 </html>

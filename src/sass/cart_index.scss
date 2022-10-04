@@ -1,42 +1,52 @@
-header{
+@import 'public';
+
+header {
     margin: 0;
     background-color: #fff;
     border-bottom: 1px solid #efefef;
-    .h-center{
-        width: 1240px;  
-        height: 80px; 
+
+    .h-center {
+        width: 1240px;
+        height: 80px;
         margin: 0 auto;
-        .header-logo{
+
+        .header-logo {
             float: left;
             height: 80px;
         }
-        .header-bread{
+
+        .header-bread {
             float: left;
             margin: 0;
             margin-top: 0px;
             padding: 0;
             margin-left: 30px;
             line-height: 80px;
-            li{
+
+            li {
                 color: #999;
                 float: left;
                 font-size: 14px;
-                #active{
-                    color: #333;
-                }
+            }
+
+            #active {
+                color: #333;
             }
         }
+
         /* 未登录的右上角 */
-        .h-empty-right{
+        .h-empty-right {
             float: right;
             height: 40px;
             font-size: 12px;
             line-height: 40px;
             margin-top: 20px;
-            p{
-                float:left;
+
+            p {
+                float: left;
                 padding: 0 20px;
-                a{
+
+                a {
                     text-decoration: none;
                     color: #666;
                 }
@@ -44,13 +54,14 @@ header{
         }
 
         /* 登录后的右上角 */
-        .header-right{
+        .header-right {
             float: right;
             height: 40px;
             font-size: 12px;
             line-height: 40px;
             margin-top: 20px;
-            .shop-list{
+
+            .shop-list {
                 float: left;
                 padding: 0 20px;
                 border-top: 1px solid transparent;
@@ -59,11 +70,13 @@ header{
                 padding: 0 20px;
                 line-height: 40px;
                 color: #666;
-                a{
+
+                a {
                     color: #666;
                 }
             }
-            .user{
+
+            .user {
                 width: 150px;
                 float: right;
                 height: 40px;
@@ -72,45 +85,61 @@ header{
                 line-height: 40px;
                 font-weight: 400;
                 text-align: center;
-                :hover{
-                    overflow: visible;
-                    a{
-                        color: #008cff;
-                    }
-                }
-                ul{
+
+                ul {
                     background-color: white;
                     position: relative;
-                    li{
+
+                    a {
+                        color: #666;
+                        vertical-align: middle;
+                    }
+
+                    li {
                         text-align: left;
                         padding: 0 20px;
                         height: 35px;
                         line-height: 35px;
-                        color: #999;    
+                        color: #999;
+                    }
+                }
+            }
+
+            :hover {
+                overflow: visible;
+                ul {
+                    border: 1px solid #BDBDBD;
+                    a {
+                        color: #008cff;
+                    }
+                    li {
+                        a {
+                            color: #999;
+                            vertical-align: middle;
+                        }
                     }
                 }
             }
         }
-
-
     }
 }
 
-main{
+main {
     /* width: 1240px; */
     /* margin: 20px auto; */
     background-color: #F4F6FA;
+
     /* 未登录的购物页面 */
-    .nolog{
+    .nolog {
         width: 1240px;
         /* height: 440px; */
         margin: 0px auto;
         background-color: #F4F6FA;
         font-size: 14px;
         position: relative;
-        /* display:none; */
         z-index: 100;
-        .div{
+
+        .div {
             height: 360px;
             /* width: 100%; */
             margin: 10px 0 30px;
@@ -121,29 +150,34 @@ main{
             vertical-align: middle;
             color: #666;
             text-align: left;
-            img{   
+
+            img {
                 width: 102px;
                 height: 133px;
                 margin-right: 30px;
             }
-            .cart-empty{
-                .empty-title{
+
+            .cart-empty {
+                .empty-title {
                     font-size: 18px;
                     font-weight: bolder;
                     margin-bottom: 15px;
                 }
-                .cart-empty-desc{
-                    
+
+                .cart-empty-desc {
+
                     margin-bottom: 20px;
                 }
-                .tips-btn{
+
+                .tips-btn {
                     border-color: #008cff;
                     background-color: #008cff;
                     width: 56px;
                     height: 34px;
                     line-height: 34px;
                     padding: 0 36px;
-                    a{
+
+                    a {
                         color: #FFF;
                         text-decoration: none;
                     }
@@ -151,16 +185,16 @@ main{
             }
         }
     }
+
     /* 登录未买 */
-    .noshop{
+    .noshop {
         width: 1240px;
-        /* height: 440px; */
         margin: 0px auto;
         background-color: #F4F6FA;
         font-size: 14px;
-        /* display:none; */
         z-index: 100;
-        .no-main{
+
+        .no-main {
             height: 360px;
             /* width: 100%; */
             margin: 10px 0 30px;
@@ -171,47 +205,52 @@ main{
             vertical-align: middle;
             color: #666;
             text-align: left;
-            img{
+
+            img {
                 width: 100px;
                 height: 114px;
                 margin-right: 30px;
             }
-            .shop-empty{
-                .to-index{
+
+            .shop-empty {
+                .to-index {
                     width: 125px;
                     height: 36px;
-                    border:1px solid #008cff;
+                    border: 1px solid #008cff;
                     border-radius: 2px;
                     background-color: #fff;
                     text-align: center;
-                    line-height: 36px
-                    a{
+                    line-height: 36px;
+
+                    a {
                         color: #008cff;
-                        text-decoration: none;;
+                        text-decoration: none;
                     }
                 }
             }
         }
     }
-    .m-center{
+
+    .m-center {
         width: 1240px;
         margin: 0px auto;
         background-color: transparent;
         font-size: 14px;
-        .m-c-header{
+
+        .m-c-header {
             height: 50px;
             margin-top: 10px;
             font-size: 12px;
             background-color: #fff;
-            color: rgba(51,51,51,.4);
+            color: rgba(51, 51, 51, .4);
             border-bottom: 1px solid #EFEFEF;
-            tr{
-                .select{
+            tr {
+                .select {
                     width: 550px;
                     text-align: left;
                     padding-left: 24px;
                     vertical-align: middle;
-                    input{
+                    input {
                         display: inline-block;
                         vertical-align: middle;
                         width: 18px;
@@ -223,26 +262,23 @@ main{
                         font-size: 10px;
                         line-height: 17px;
                         margin-right: 5px;
-                        
                     }
-                    .check{
+                    .check {
                         vertical-align: middle;
                         color: #333;
                         font-size: 14px;
-                        /* line-height: 14px; */
                     }
-
                 }
-                .price{
+                .price {
                     width: 220px;
                     text-align: center;
                 }
-                .num{
+                .num {
                     width: 200px;
                     text-align: center;
                 }
-                .totals{
-                    width: 460px;
+                .totals {
+                    width: 220px;
                     text-align: center;
                 }
                 .editor {
@@ -253,13 +289,13 @@ main{
                 }
             }
         }
-        .kind{
+        .kind {
             height: 50px;
             line-height: 49px;
             padding-left: 26px;
             background-color: #FAFAFC;
             margin-top: 1px;
-            input{
+            input {
                 display: inline-block;
                 vertical-align: middle;
                 width: 18px;
@@ -272,11 +308,11 @@ main{
                 line-height: 17px;
                 margin-right: 5px;
             }
-            :nth-child(2){
+            :nth-child(2) {
                 color: #666;
                 font-weight: 400;
             }
-            .free{
+            .free {
                 font-size: 12px;
                 line-height: 40px;
                 color: #8c8c8c;
@@ -284,10 +320,11 @@ main{
                 vertical-align: middle;
             }
         }
+
         //购物车列表
-        .shoplist{
+        .shoplist {
             background-color: transparent;
-            .goodInfo{
+            .goodInfo {
                 background-color: #fff;
                 width: 1240px;
                 height: 150px;
@@ -295,29 +332,30 @@ main{
                 align-items: center;
                 margin-top: 2px;
                 li{
-                    img{
+                    img {
                         width: 100px;
                         height: 100px;
                         text-align: center;
                     }
                 }
-
-                li:nth-child(1) input{
-                    border-color: #008cff;
-                    background-color: #008cff;
-                    display: inline-block;
-                    vertical-align: middle;
-                    width: 18px;
-                    height: 18px;
-                    border: 1px solid #BDBDBD;
-                    border-radius: 2px;
-                    background-color: #fff;
-                    text-align: center;
-                    font-size: 10px;
-                    line-height: 17px;
-                    margin-left: 25px;
-                    margin-right: 5px;
-                } 
+                li:nth-child(1){
+                    input {
+                        border-color: #008cff;
+                        background-color: #008cff;
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 18px;
+                        height: 18px;
+                        border: 1px solid #BDBDBD;
+                        border-radius: 2px;
+                        background-color: #fff;
+                        text-align: center;
+                        font-size: 10px;
+                        line-height: 17px;
+                        margin-left: 25px;
+                        margin-right: 5px;
+                    }
+                }
                 li:nth-child(2){
                     width: 120px;
                 }
@@ -332,23 +370,23 @@ main{
                     width: 240px;
                     text-align: center;
                 }
-                li:nth-child(5){
+                .num {
                     width: 170px;
                     text-align: center;
-                    text-align: center;
-                    width: 35px;
-                    height: 24px;
-                    font-weight: 400;
-                    text-align: center;
-                    border: 0;
-                    border-top: 1px solid #EFEFEF;
-                    border-bottom: 1px solid #EFEFEF;
-                }
-                .num{
-                    a{
+                    input {
+                        text-align: center;
+                        width: 35px;
+                        height: 24px;
+                        font-weight: 400;
+                        text-align: center;
+                        border: 0;
+                        border-top: 1px solid #EFEFEF;
+                        border-bottom: 1px solid #EFEFEF;
+                    }
+                    a {
                         display: inline-block;
                         width: 24px;
-                        height: 24px;   
+                        height: 24px;
                         /* position: relative; */
                         color: #595959;
                         line-height: 24px;
@@ -358,30 +396,28 @@ main{
                     }
                 }
                 .total{
+                    color: #E02B41;
                     width: 220px;
                     text-align: center;
                     font-weight: 400;
                 }
-                li:nth-child(7){
+                li:nth-child(7) {
                     width: 100px;
                     text-align: right;
                     color: #008cff;
                     padding-right: 48px;
                 }
-                .delete{
+                .delete {
                     display: inline-block;
                     vertical-align: middle;
                     width: 24px;
                     height: 24px;
                     margin-right: 3px;
                     color: #666;
-                
                 }
-
             }
         }
-
-        .m-c-footer{
+        .m-c-footer {
             width: 100%;
             height: 70px;
             font-size: 14px;
@@ -389,16 +425,16 @@ main{
             line-height: 67px;
             margin-top: 10px;
             background-color: transparent;
-            .container{
+            .container {
                 background-color: #fff;
                 height: 100%;
                 width: 1240px;
                 margin: 0 auto;
-                .contain-left{
+                .contain-left {
                     float: left;
                     margin-left: 26px;
                     height: 100%;
-                    input{
+                    input {
                         border-color: #008cff;
                         background-color: #008cff;
                         vertical-align: middle;
@@ -406,168 +442,181 @@ main{
                         height: 18px;
                         border: 1px solid #BDBDBD;
                         border-radius: 2px;
-                    
                         text-align: center;
                         font-size: 10px;
                         line-height: 17px;
                         margin-right: 5px;
                     }
-                    .check{
+                    .check {
                         vertical-align: middle;
                         color: #333;
                         font-size: 14px;
                         line-height: 0;
                     }
-                    .del{
+                    .del {
                         margin: 0 24px 0 12px;
                         color: #8C8C8C;
                         vertical-align: middle;
                     }
-                    .count{
+                    .count {
                         color: #8C8C8C;
                         vertical-align: middle;
                     }
                 }
-                .contain-right{
+                .contain-right {
                     float: right;
                     height: 100%;
                     /* width: 404px; */
                     margin-right: 30px;
-                    span{
-                        float: left;
+                    span {
                         color: #595959;
                         vertical-align: middle;
                         font-size: 14px;
-                        color: #666;
-                        line-height: 67px;
-                        .discount{
+                        span {
+                            color: #666;
+                            line-height: 67px;
+                        }
+                        .discount {
                             color: #E02B41;
                             margin: 0 5px;
                         }
-                        .totalprice{
-                            
+
+                        .totalprice {
                             font-size: 20px;
                             font-weight: bolder;
                             color: #E02B41;
                             margin-right: 24px;
                             vertical-align: middle;
                         }
-                        .payit{
-                            
-                            width: 58px;
-                            padding: 0 20px;
-                            background: #DBDBDB;
-                            color: #fff !important;
-                            border-color: #DBDBDB;
-                            border-radius: 2px;
-                            display: inline-block;
-                            text-align: center;
-                            vertical-align: middle;
-                            line-height: 34px;
-                        }
-                    }
-                }
-            }
-        }
 
-        //删除的遮罩层
-        .mz-mask{
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            background-color: rgba(153,153,153,.6);
-            z-index: 100000;
-            display: none;
-            .mz-dialog {
-                position: absolute;
-                width: 500px;
-                height: 240px;
-                border-radius: 4px;
-                overflow: hidden;
-                line-height: normal;
-                background-color: #FFF;
-                left: 50%;
-                top: 50%;
-                margin-left: -250px;
-                margin-top: -120px;
-                .mz-dialog-header {
-                    position: relative;
-                    height: 50px;
-                    color: #333;
-                    line-height: 50px;
-                    text-align: center;
-                    border-bottom: 1px solid #EFEFEF;
-                    font-size: 18px;
-                    font-weight: bolder;
-                    border-radius: 4px 4px 0 0;
-                    .mz-dialog-close {
-                        position: absolute;
-                        right: 26px;
-                        top: 18px;
-                        width: 15px;
-                        height: 15px;
-                        line-height: 15px;
-                        color: #BDBDBD;
-                    
-                      }
-                }
-                .mz-dialog-main {
-                    display: table;
-                    padding: 30px;
-                    word-break: break-all;
-                    word-wrap: break-word;
-                    width: 440px;
-                    .mz-dialog-warp {
-                        display: table-cell;
-                        vertical-align: middle;
-                        height: 64px;
-                        color: #999;
-                        font-size: 14px;
-                        line-height: 22px;
-                        .mz-dialog-content {
-                            text-align: center;
-                        }
                     }
-                }
-                .mz-dialog-bottom {
-                    margin-bottom: 30px;
-                    width: 100%;
-                    text-align: center;
-                    .mz-btn {
-                        margin-right: 10px;
-                        border-style: solid;
-                        border-width: 1px;
-                        border-radius: 4px;
-                        font-size: 14px;
+
+                    .payit {
                         width: 58px;
-                        height: 34px;
-                        line-height: 34px;
                         padding: 0 20px;
+                        background: #DBDBDB;
+                        color: #fff !important;
+                        border-color: #DBDBDB;
+                        border-radius: 2px;
                         display: inline-block;
                         text-align: center;
                         vertical-align: middle;
-                    }
-                    .cancel {
-                        color: #999;
-                        border-color: #EFEFEF;
-                        background-color: #EFEFEF;
-                    }
-                    .success {
-                        color: #FFF;
-                        border-color: #008cff;
-                        background-color: #008cff;
+                        line-height: 34px;
                     }
                 }
             }
         }
     }
 
+    //删除的遮罩层
+    .mz-mask {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(153, 153, 153, .6);
+        z-index: 100000;
+        display: none;
+
+        .mz-dialog {
+            position: absolute;
+            width: 500px;
+            height: 240px;
+            border-radius: 4px;
+            overflow: hidden;
+            line-height: normal;
+            background-color: #FFF;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -120px;
+
+            .mz-dialog-header {
+                position: relative;
+                height: 50px;
+                color: #333;
+                line-height: 50px;
+                text-align: center;
+                border-bottom: 1px solid #EFEFEF;
+                font-size: 18px;
+                font-weight: bolder;
+                border-radius: 4px 4px 0 0;
+
+                div {
+                    color: #333;
+                }
+
+                .mz-dialog-close {
+                    position: absolute;
+                    right: 26px;
+                    top: 18px;
+                    width: 15px;
+                    height: 15px;
+                    line-height: 15px;
+                    color: #BDBDBD;
+                }
+            }
+
+            .mz-dialog-main {
+                // display: table;
+                padding: 30px;
+                word-break: break-all;
+                word-wrap: break-word;
+                width: 440px;
+
+                .mz-dialog-warp {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 64px;
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 22px;
+
+                    .mz-dialog-content {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .mz-dialog-bottom {
+                margin-bottom: 30px;
+                width: 100%;
+                text-align: center;
+
+                .mz-btn {
+                    margin-right: 10px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    width: 58px;
+                    height: 34px;
+                    line-height: 34px;
+                    padding: 0 20px;
+                    display: inline-block;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+                .cancel {
+                    color: #999;
+                    border-color: #EFEFEF;
+                    background-color: #EFEFEF;
+                }
+
+                .success {
+                    color: #FFF;
+                    border-color: #008cff;
+                    background-color: #008cff;
+                }
+            }
+        }
+    }
 }
 
 
-footer{
+footer {
     margin-top: 50px;
     padding: 0;
     position: relative;
@@ -579,16 +628,16 @@ footer{
     font-size: 12px;
     font-weight: 400;
     background-color: #fff;
-    .f-center{
+
+    .f-center {
         padding: 48px 0 20px;
         border-top: 1px solid #f1f1f1;
-        .f-c-header{
+        .f-c-header {
             width: 1240px;
             height: 82px;
             margin: 0 auto;
             position: relative;
-            /* display: block; */
-            .service{
+            .service {
                 width: 1000px;
                 float: left;
                 margin: 0;
@@ -597,23 +646,23 @@ footer{
                 font-weight: 400;
                 li{
                     float: left;
-                    text-align: center;
+                    
                     width: 15%;
-                    a{
-                        /* display: block; */
+                    a {
+                        text-align: center;
+                        display: block;
                         overflow: hidden;
                         line-height: 27px;
                         font-size: 12px;
                         color: #666;
-                        text-decoration: none;
                         background-color: transparent;
-                        img{
+                        img {
                             width: 50px;
-                            /* display: block; */
                             margin: 0 auto;
                             border-style: none;
+                            display: block;
                         }
-                        span{
+                        span {
                             line-height: 30px;
                             color: #999;
                         }
@@ -621,23 +670,27 @@ footer{
                 }
 
             }
-            .online{
+
+            .online {
                 float: right;
                 text-align: right;
                 margin-top: -18px;
-                span{
+
+                span {
                     color: #999;
                     font-size: 12px;
                     line-height: 30px;
                 }
-                p{
+
+                p {
                     color: #008cff;
                     font-size: 25px;
                     font-weight: 400;
                     margin-top: -6px;
                     line-height: 40px;
                 }
-                a{
+
+                a {
                     height: 30px;
                     padding: 0 16px;
                     overflow: hidden;
@@ -655,7 +708,8 @@ footer{
             }
 
         }
-        hr{
+
+        hr {
             margin: 10px auto 28px;
             display: block;
             height: 1px;
@@ -663,11 +717,13 @@ footer{
             border-top: 1px solid #eee;
             padding: 0;
         }
-        .f-c-footer{
+
+        .f-c-footer {
             width: 1240px;
             margin: 0 auto;
             position: relative;
-            .f-row1{
+
+            .f-row1 {
                 .links{
                     margin: 0;
                     padding: 0;
@@ -689,15 +745,21 @@ footer{
                         }
                     }
                     #china{
-                        vertical-align: middle;
+                        width: 100px;
                         position: relative;
+                        display: flex;
                         img{
                             width: 18px;
                             height: 18px;
                             line-height: 22px;
                         }
+                        a{  
+                            margin-left: 5px;
+                            width: 80px;
+                            height: 18px;
+                            line-height: 18px;
+                        }
                         .nation{
-                            color: #333;
                             width: 110px;
                             height: 190px;
                             background-color: #fff;
@@ -707,15 +769,31 @@ footer{
                             border: 1px solid #d6d6d6;
                             display: none;
                             li{
+                                font-size: 12px;
+                                border-right: 0px solid #d6d6d6;
                                 margin-top: 13px;
                                 height: 22px;
                                 background: #fff;
+                                padding-left: 5px;
+                                img{
+                                    height: 22px;
+                                    width: 22px;
+                                    // margin-left: 15px;
+                                    // margin-right: 5px;
+                                    vertical-align: middle;
+                                }
+                                span{
+                                    color: #333;
+                                    margin-left: 10px;
+                                }
                             }
                         }
-                        :hover .nation{
+                    }
+                    #china:hover{
+                        .nation{
                             display: block;
                         }
-                    }
+                    } 
                 }
                 .letter{
                     padding-top: 8px;
@@ -728,38 +806,47 @@ footer{
                     }
                 }
             }
-            .f-row2{
+
+            .f-row2 {
                 width: 158px;
                 float: right;
                 margin-top: 25px;
                 position: relative;
                 line-height: 27px;
                 a{
-                    :nth-child(1):hover span{
-                        color:#31a573;
-                    }
-                    :nth-child(2):hover span{
-                        color:#31a573;
-                    }
-                    :nth-child(3):hover span{
-                        color: gold;
-                    }
-                    :nth-child(4):hover span{
-                        color: red;
-                    }
-                    img{
+                    img {
                         width: 160px;
                         height: 160px;
                         position: absolute;
                         top: -170px;
                         left: -20px;
                         display: none;
-                    }
-                    :nth-child(1):hover img{
+                    } 
+                }
+                a:nth-child(1):hover{
+                    img{
                         display: block;
                     }
-                    :nth-child(2):hover img{
+                    span{
+                        color: #31a573;
+                    }
+                }
+                a:nth-child(2):hover{
+                    img{
                         display: block;
+                    }
+                    span{
+                        color: #31a573;
+                    }
+                }
+                a:nth-child(3):hover{
+                    span{
+                        color: gold;
+                    }
+                }
+                a:nth-child(4):hover{
+                    span{
+                        color: red;
                     }
                 }
             }

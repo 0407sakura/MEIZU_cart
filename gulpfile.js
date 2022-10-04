@@ -16,7 +16,7 @@ let imagemin = require('gulp-imagemin');
 
 //index
 let copyIndex = () => {
-    return src('./src/cart_index.html')
+    return src('./src/index.html')
         .pipe(dest('./dist'));
 }
 //data
@@ -63,7 +63,7 @@ let fnImg = () => {
 
 //watch
 let fnWatch = () => {
-    watch('./src/cart_index.html',copyIndex);
+    watch('./src/index.html',copyIndex);
     watch('./src/lib/**/*',copyLib);
     watch('./src/data/**/*.scss',copyData);
     watch('./src/html/**/*.html',fnHTML);

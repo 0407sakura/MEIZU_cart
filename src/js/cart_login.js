@@ -11,15 +11,16 @@ class Islog{
     init(){
         //先获取免登录中cookie的用户名
         let cookie_log = $.cookie('logined') ? $.cookie('logined') : ''; 
+        
+        //从cookie中获取商品
         let cookie_num = $.cookie('products') ? $.cookie('products') : '';
-        //这是最后一次登录成功的用户名
         
         //检测用户名是否存在
-        if(cookie_log){
+        if(1){
             $('.h-empty-right').css('display','none');
             $('.nolog').css('display','none');
             $('.header-right').css('display','block');
-
+            $('user-num').text(cookie_log);
             // 获取退出按钮
             $('#back').click = function(){
                 cookie.remove('logined',{path : '/'});
@@ -28,7 +29,7 @@ class Islog{
             
             
             //获取商品数量，判断购物车是否有商品
-            if(cookie_num){
+            if(1){
                 $('.m-center').css('display','block');
                 $('.noshop').css('display','none');
             }else{

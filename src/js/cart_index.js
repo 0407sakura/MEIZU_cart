@@ -26,7 +26,6 @@ function shopTotal(){
     $(".totalprice").text(countTotal);
 }
 
-
 //测试
 let cookie_obj = {
     "sp1" : {
@@ -51,8 +50,9 @@ let cookie_obj = {
         "src" : "img/cart-18.png"
     }
 }
-
 $.cookie("products",JSON.stringify(cookie_obj));
+
+
 
 //测试
 let phonenumber = 2132436;

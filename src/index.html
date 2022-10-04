@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/font/iconfont.css">
+    <link rel="stylesheet" href="./css/cart_index.min.css">
+    <script src="./lib/jquery-1.12.4.js"></script>
+    <script src="./lib/jquery.cookie.js"></script>
+</head>
+<body>
+    <header>
+        <div class="h-center">
+            <div class="header-logo">
+                <a href="./html/shouye.html">
+                    <img src="./img/cart-01.png" alt="" style="margin-top: 28px;">
+                </a>
+            </div>
+            <ul class="header-bread">
+                <li id="active">购物车&nbsp;&nbsp;</li>
+                <li>&gt;&nbsp;&nbsp;确认订单&nbsp;&nbsp;</li>
+                <li>&gt;&nbsp;&nbsp;在线支付&nbsp;&nbsp;</li>
+                <li>&gt;&nbsp;&nbsp;完成</li>
+            </ul>
+
+
+            <!-- 已登录 -->
+            <ul class="header-right">
+                <li class="shop-list">
+                    <a href="./html/dingdan.html">我的订单</a>
+                </li>
+                <li class="user">
+                    <ul >
+                        <a href="./html/shangcheng.html">        
+                            <!-- 这里是商城 -->
+                            <span id="user-num">用户212222</span>的商城<span class="iconfont icon-jiantouxia" id="personal"></span>
+                        </a>
+                        <li><a href="">地址管理</a></li>
+                        <li><a href="">我的收藏</a></li>
+                        <li><a href="">我的回购金</a></li>
+                        <li><a href="">问题反馈</a></li>
+                        <li style="text-align: center; border-top:1px solid #bdbdbd;"><a href="" id="back">退出</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 未登录 -->
+            <div class="h-empty-right">
+               <p><a href="">我的订单</a></p>
+               <p><a href="">登录</a></p><!--跳转登录页-->
+               <p><a href="">注册</a></p> <!--跳转注册页-->
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <!-- 未登录 -->
+        <div class="nolog">
+            <div class="div">
+                <img src="./img/cart-33.png" alt="">
+                <div class="cart-empty">
+                    <div class="empty-title">您还没有登录！
+                    </div>
+                    <div class="cart-empty-desc">登录后可显示您账号中已加入的商品哦~</div>
+                    <div class="tips-btn"><a href="">去登录</a></div><!--跳转登录页-->
+                </div> 
+            </div>
+            
+        </div>
+
+        <!-- 登录后无购买商品 -->
+        <div class="noshop">
+            <div class="no-main">
+                <img src="./img/cart-34.png" alt="">
+                <div class="shop-empty">
+                    <div class="empty-title">购物车内还没有商品，赶紧去选购吧~
+                    </div>
+                    <div class="to-index"><a href="">返回商城首页</a></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- 登录后有购买商品 -->
+        <div class="m-center">
+            <table class="m-c-header">
+                <tr>
+                    <td class="select">
+                        <input type="checkbox" name="" class="opt all1 all" >
+                        <span class="check">全选</span>
+                    </td>
+                    <td class="price">单价（元）</td>
+                    <td class="num">数量</td>
+                    <td class="totals">小计（元）</td>
+                    <td class="editor">编辑</td>
+                </tr>
+            </table>
+            <div class="kind">
+                <input type="checkbox" class="opt all2 all" >
+                <span>魅族</span>
+                <span class="free"></span>
+            </div>
+            <div class="shoplist">
+               
+            </div>
+
+            <div class="m-c-footer" >
+                <div class="container">
+                    <div class="contain-left">
+                        <input type="checkbox" name="" class="opt all3 all" class="check" >
+                        <span class="check">全选</span>
+                        <span class="del">删除选中的商品</span>
+                        <span class="count">共<span ></span>件商品，已选择<span style="color:#008cff;"> 0 </span>件</span>
+                    </div>
+                    <div class="contain-right">
+                        <span>已优惠<span class="discount">0.00</span>元，合计（不含运费）<span class="totalprice">0.00</span></span>
+                        <div class="payit">去结算</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 这是删除的遮罩层 -->
+        <div class="mz-mask">
+            <div class="mz-dialog dialog ">
+              <div class="mz-dialog-header">
+                <div class="mz-dialog-title">删除</div>
+                <div class="mz-dialog-close">
+                    <span class="iconfont icon-guanbijiantou"></span>
+                </div>
+              </div>
+              <div class="mz-dialog-main">
+                <div class="mz-dialog-warp">
+                  
+                  <div class="mz-dialog-content">您确定要删除该商品吗？</div>
+                </div>
+              </div>
+              
+              <div class="mz-dialog-bottom">
+                
+                <div class="mz-btn cancel">删除</div>
+                
+                <div class="mz-btn success">取消</div>
+                
+              </div>
+              
+            </div>
+          </div>
+
+    </main>
+    <footer>
+        <div class="f-center">
+            <div class="f-c-header">
+                <ul class="service">
+                    <li><a href="https://service.meizu.com/help/delivery.html"><img src="./img/cart-2.png" alt=""><span>满80免运费</span></a></li>
+                    <li><a href="https://store.meizu.com/marrive/summary.html"><img src="./img/cart-3.png" alt=""><span>100+ 城市次日达</span></a></li>
+                    <li><a href="https://service.meizu.com/help/after_ser.html#policy1"><img src="./img/cart-04.png" alt=""><span>7天无理由退货</span></a></li>
+                    <li><a href="https://service.meizu.com/help/after_ser.html#policy2"><img src="./img/cart-5.png" alt=""><span>15天换货保障</span></a></li>
+                    <li><a href="https://service.meizu.com/help/after_ser.html#policy3"><img src="./img/cart-6.png" alt=""><span>1年免费保修</span></a></li>
+                    <li><a href="https://service.meizu.com/repair/home.html"><img src="./img/cart-7.png" alt=""><span>上门快修</span></a></li>
+                </ul>
+                <div class="online">
+                    <span>周一至周日 8:00-20:00</span>
+                    <p class="tel">400-788-3333</p>
+                    <a href="https://crmonline.meizu.com/FS_WEB_IM/mz_websocket.html?live-service=">在线客服</a>
+                </div>
+            </div>
+            <hr>
+            <div class="f-c-footer">
+                <div class="f-row1">
+                    <ul class="links">
+                        <li><a href="https://www.meizu.com/about.html#know">了解魅族</a></li>
+                        <li><a href="http://hr.meizu.com/">加入我们</a></li>
+                        <li><a href="https://www.meizu.com/about.html#contact">联系我们</a></li>
+                        <li><a href="https://service.meizu.com/retail/index.html">线下专卖店</a></li>
+                        <li><a href="https://www.meizu.com/authorization/index.html">线上销售授权名单</a></li>
+                        <li><a href="https://www.meizu.com/feedback.html">问题反馈</a></li>
+                        <li><a href="http://www.gdjubao.cn/jb/Acceptance/swlblyhxx/">涉网络暴力有害信息举报</a></li>
+                        <li><a href="http://www.gdjubao.cn/jb/?harm_type=18">涉未成年人网络有害信息举报</a></li>
+                        <li><a href="http://www.gdjubao.cn/jb/Acceptance/sylzpyhxx/">涉养老诈骗有害信息举报</a></li>
+                        <li style="border: none;" id="china">
+                            <img src="./img/cart-21.png" alt="">
+                            <a href="#">简体中文</a>
+                            <ul class="nation">
+                                <li><a href=""><img src="./img/cart-21.png" alt=""><span>简体中文</span></a></li><!-- 这里跳转首页-->
+                                <li><a href="https://www.meizu.com/hk"><img src="./img/cart-22.png" alt=""><span>繁體中文</span></span></a></li>
+                                <li><a href="https://www.meizu.com/en"><img src="./img/cart-23.png" alt=""><span>English</span></a></li>
+                                <li><a href="https://www.meizu.com/ru/"><img src="./img/cart-24.png" alt=""><span>Русский</span></a></li>
+                                <li><a href="https://www.meizu-tr.com/"><img src="./img/cart-25.png" alt=""><span>Türkiye</span></a></li>
+                            </ul>
+                            
+                        </li>
+                    </ul>
+                    <br>
+                    <div class="letter">
+                        <span>©2022 Meizu Telecom Equipment Co., Ltd. All Rights Reserved.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index">粤ICP备13003602号-2</a>
+                        <a target="_blank" href="http://www3.res.meizu.com/static/cn/_partial/footer/images/icp2_fb8db74.jpg" >合字B2-20170010 </a>
+                        <a target="_blank" href="https://www3.res.meizu.com/static/cn/_partial/footer/images/com_licence_b00fe42.jpg">营业执照</a>
+                        <a target="_blank" href="https://www.meizu.com/legal.html">法律声明</a>
+                        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44049102496009"><span><i></i>粤公网安备 44049102496009 号</span></a>
+
+                    </div>
+                </div>
+                <div class="f-row2">
+                    <div style="display: flex;justify-content:space-between;">
+                        <a href="#"><span class="iconfont icon-xiaochengxu"></span><img src="./img/cart-11.png" alt=""></a>
+                        <a href="#"><span class="iconfont icon-weixin"></span><img src="./img/cart-12.jpg" alt=""></a>
+                        <a href="https://user.qzone.qq.com/2762957059"><span class="iconfont icon-qzone"></span></a>
+                        <a href="https://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=https%3A%2F%2Fweibo.com%2Fmeizumobile&domain=.weibo.com&sudaref=https%3A%2F%2Fcart.meizu.com%2F&ua=php-sso_sdk_client-0.6.36&_rand=1664885303.7026"><span class="iconfont icon-weibo"></span></span></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/cart_login.min.js"></script>
+    <script src="./js/cart_index.min.js"></script>
+</body>
+</html>

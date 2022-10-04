@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./lib/iconfont.css">
-    <link rel="stylesheet" href="./sass/cart_index.scss">
-    <link rel="stylesheet" href="./sass/_public.scss">
-    <!-- <style>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/cart_index.css">
+    <style>
         .totals{
             width: 210px;
             text-align: center;
         }
-    </style> -->
+    </style>
+
 </head>
 <body>
     <header>
@@ -52,12 +52,15 @@
                 </li>
             </ul>
 
+
             <!-- 未登录 -->
             <div class="h-empty-right">
                <p><a href="">我的订单</a></p>
                <p><a href="">登录</a></p>
                <p><a href="">注册</a></p> 
             </div>
+
+
 
         </div>
     </header>
@@ -188,7 +191,7 @@
                         <li><a href="">涉养老诈骗有害信息举报</a></li>
                         <li style="border: none;" id="china">
                             <img src="./img/cart-21.png" alt="">
-                            简体中文
+                            <a href="">简体中文</a>
                             <ul class="nation">
                                 <li><a href=""><img src="./img/cart-21.png" alt=""><span>简体中文</span></a></li>
                                 <li><a href=""><img src="./img/cart-22.png" alt=""><span>繁體中文</span></span></a></li>
@@ -223,9 +226,12 @@
         </div>
     </footer>
 </body>
-    <script></script>
-    <script src="./js/jquery.js"></script>
+    <script>
+
+    </script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/jquery.cookie.js"></script>
-    <script src="./js/cart_login.js"></script>
-    <script src="./js/cart_index.js"></script>
+    <script src="./js/islogin.js"></script>
+    <script src="./js/cart.js"></script>
+
 </html>
