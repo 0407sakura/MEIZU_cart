@@ -1,32 +1,4 @@
-
-
-//将字符串转为对象
-function convertStrToObj(str){
-    if(!str){
-        return {};
-    }
-    return JSON.parse(str);
-}
-
-
-//当前的商品数,选中商品数
-function shopNum (){
-    $(".count span:nth-child(1)").text($(".one").length);
-    $(".count span:nth-child(2)").text($(".one:checked").length);
-}
-
-
-//优惠价和实际支付价
-function shopTotal(){
-    let countTotal = 0;
-    $($(".one:checked")).each(function(){
-        countTotal += eval($(this).parent().parent().children(".total").text());
-        console.log($(this).parent().parent().children(".total").text());
-    })
-    $(".totalprice").text(countTotal);
-}
-
-//测试
+//测试部分
 let cookie_obj = {
     "sp1" : {
         "name" : "魅族 16s Pro",
@@ -50,12 +22,42 @@ let cookie_obj = {
         "src" : "img/cart-18.png"
     }
 }
+//将测试的的商品项目存入cookie
 $.cookie("products",JSON.stringify(cookie_obj));
 
 
+//将字符串转为对象
+function convertStrToObj(str){
+    if(!str){
+        return {};
+    }
+    return JSON.parse(str);
+}
 
-//测试
-let phonenumber = 2132436;
+
+//当前的商品数,选中商品数
+function shopNum (){
+        $(".count span:nth-child(1)").text($(".one").length);
+        $(".count span:nth-child(2)").text($(".one:checked").length);
+    
+    
+    
+}
+
+
+//优惠价和实际支付价
+function shopTotal(){
+    let countTotal = 0;
+    $($(".one:checked")).each(function(){
+        countTotal += eval($(this).parent().parent().children(".total").text());
+        console.log($(this).parent().parent().children(".total").text());
+    })
+    $(".totalprice").text(countTotal);
+}
+
+
+
+
 
 class Cart{
     constructor(){
@@ -202,6 +204,19 @@ class Cart{
                     delete cookie_obj[id];
                     //存储在cookie存储中
                     $.cookie('products',JSON.stringify(cookie_obj));
+
+                    //获取存储中的商品信息
+                    let cookie_str1 = $.cookie('products') ? $.cookie('products') : '';
+                    // console.log(cookie_obj)
+                    //遍历对象
+                    
+                    if(cookie_obj1 != {}){
+                        $('.m-center').css('display','block');
+                        $('.noshop').css('display','none');
+                    }else{
+                        $('.noshop').css('display','block');
+                        $('.m-center').css('display','none');
+                    }
                 });
             }else{
                 $(this).text("编辑");
@@ -264,7 +279,7 @@ class Cart{
 
 
     mycenter(){
-        $(".user>ul>a>span").first().text(`用户${phonenumber}`)
+        // $(".user>ul>a>span").first().text(`用户${}`)
         // 右上角用户特效的箭头
         $(".user").hover(
             function(){

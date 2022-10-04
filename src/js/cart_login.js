@@ -1,5 +1,5 @@
 $.cookie("logined","12345678901");//这是测试的免登录用户名,一般是手机号
-
+//如果登录页已存入，请注释掉
 
 class Islog{
     constructor(){
@@ -28,7 +28,7 @@ class Islog{
             }
             
             //获取商品数量，判断购物车是否有商品
-            if(0){
+            if(1){
                 $('.m-center').css('display','block');
                 $('.noshop').css('display','none');
             }else{
