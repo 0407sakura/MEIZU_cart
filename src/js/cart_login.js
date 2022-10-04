@@ -1,4 +1,4 @@
-
+$.cookie("logined","12345678901");//这是测试的免登录用户名,一般是手机号
 
 
 class Islog{
@@ -10,8 +10,8 @@ class Islog{
     //初始化数据
     init(){
         //先获取免登录中cookie的用户名
-        let cookie_log = $.cookie('logined') ? $.cookie('logined') : ''; 
-        
+        let login = $.cookie('logined') ? $.cookie('logined') : ''; 
+        let cookie_log = login.substr(4,7);//手机号11位，这里只需要7位，截取后7位，作为用户编号
         //从cookie中获取商品
         let cookie_num = $.cookie('products') ? $.cookie('products') : '';
         
@@ -20,16 +20,15 @@ class Islog{
             $('.h-empty-right').css('display','none');
             $('.nolog').css('display','none');
             $('.header-right').css('display','block');
-            $('user-num').text(cookie_log);
+            $('#user-num').text(cookie_log);
             // 获取退出按钮
             $('#back').click = function(){
                 cookie.remove('logined',{path : '/'});
                 that.init();
             }
             
-            
             //获取商品数量，判断购物车是否有商品
-            if(1){
+            if(0){
                 $('.m-center').css('display','block');
                 $('.noshop').css('display','none');
             }else{

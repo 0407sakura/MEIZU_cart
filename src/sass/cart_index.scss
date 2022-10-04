@@ -76,7 +76,7 @@ header {
                 }
             }
 
-            .user {
+            .user{
                 width: 150px;
                 float: right;
                 height: 40px;
@@ -85,39 +85,55 @@ header {
                 line-height: 40px;
                 font-weight: 400;
                 text-align: center;
-
-                ul {
+                
+                #user-hidden{
                     background-color: white;
                     position: relative;
-
-                    a {
-                        color: #666;
-                        vertical-align: middle;
-                    }
-
-                    li {
-                        text-align: left;
+                    li{
+                        
                         padding: 0 20px;
+                        text-align: left;
                         height: 35px;
                         line-height: 35px;
                         color: #999;
+                        vertical-align: middle;
+                        a{
+                            vertical-align: middle;
+                        }
+                        
                     }
+                    #user-show{
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 10px;
+                        a{
+                            color: #666;
+                            vertical-align: middle;
+                            
+                        }
+                        
+                    }
+                    
                 }
-            }
-
-            :hover {
+            }:hover{
                 overflow: visible;
-                ul {
+                #user-hidden{
                     border: 1px solid #BDBDBD;
-                    a {
-                        color: #008cff;
-                    }
+                    // border-top: 0px solid;
                     li {
                         a {
                             color: #999;
                             vertical-align: middle;
-                        }
+                        } 
+                        
                     }
+                    #user-show{
+                        a{
+                            color: #008cff;
+                        }
+                        
+                    }
+                    
                 }
             }
         }
