@@ -39,9 +39,6 @@ function convertStrToObj(str){
 function shopNum (){
         $(".count span:nth-child(1)").text($(".one").length);
         $(".count span:nth-child(2)").text($(".one:checked").length);
-    
-    
-    
 }
 
 
@@ -108,8 +105,10 @@ class Cart{
                 let id = $(this).parent().parent().attr('data-good-id');
                 //获取cookie存储
                 let cookie_str = $.cookie('products') ? $.cookie('products') : '';
+                
                 //转为对象
                 let cookie_obj = convertStrToObj(cookie_str);
+                
                 if(cookie_obj[id].num > 1){
                     cookie_obj[id].num --;
                 }
@@ -298,6 +297,9 @@ class Cart{
         })
         $(".totalprice").text($totalmoney);
     }
+
+
+    
 }
 
 new Cart();

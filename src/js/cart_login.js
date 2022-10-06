@@ -1,4 +1,4 @@
-$.cookie("logined","12345678901");
+// $.cookie("logined","12345678905");
 //这是测试的免登录用户名,一般是手机号
 //如果登录页已存入，请注释掉
 
@@ -6,6 +6,12 @@ class Islog{
     constructor(){
         //初始化页面数据
         this.init();
+        // 获取退出按钮
+        $('#back').click(function(){
+            $.removeCookie('logined', { path: '/' });
+            // $.cookie('logined',null);
+            this.init();
+        })
     }
 
     //初始化数据
@@ -17,19 +23,14 @@ class Islog{
         let cookie_num = $.cookie('products') ? $.cookie('products') : '';
         
         //检测用户名是否存在
-        if(1){
+        if(cookie_log){
             $('.h-empty-right').css('display','none');
             $('.nolog').css('display','none');
             $('.header-right').css('display','block');
             $('#user-num').text(cookie_log);
-            // 获取退出按钮
-            $('#back').click(function(){
-                cookie.remove('logined',{path : '/'});
-                that.init();
-            })
             
             //获取商品数量，判断购物车是否有商品
-            if(1){
+            if(cookie_num){
                 $('.m-center').css('display','block');
                 $('.noshop').css('display','none');
             }else{
@@ -43,7 +44,9 @@ class Islog{
             $('.m-center').css('display','none');
             $('.noshop').css('display','none');
         }
-    
+        
+
+        
 
     }
 }
