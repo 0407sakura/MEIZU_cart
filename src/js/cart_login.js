@@ -22,10 +22,10 @@ class Islog{
             $('.header-right').css('display','block');
             $('#user-num').text(cookie_log);
             // 获取退出按钮
-            $('#back').click = function(){
+            $('#back').click(function(){
                 cookie.remove('logined',{path : '/'});
                 that.init();
-            }
+            })
             
             //获取商品数量，判断购物车是否有商品
             if(1){

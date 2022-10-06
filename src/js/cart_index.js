@@ -206,17 +206,12 @@ class Cart{
                     $.cookie('products',JSON.stringify(cookie_obj));
 
                     //获取存储中的商品信息
-                    let cookie_str1 = $.cookie('products') ? $.cookie('products') : '';
-                    // console.log(cookie_obj)
-                    //遍历对象
+                    let cookie_true = convertStrToObj($.cookie('products') ? $.cookie('products') : '');
                     
-                    if(cookie_obj1 != {}){
-                        $('.m-center').css('display','block');
-                        $('.noshop').css('display','none');
-                    }else{
+                    if($.isEmptyObject(cookie_true)){
                         $('.noshop').css('display','block');
                         $('.m-center').css('display','none');
-                    }
+                    }   
                 });
             }else{
                 $(this).text("编辑");
