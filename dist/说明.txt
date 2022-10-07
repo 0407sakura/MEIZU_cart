@@ -1,0 +1,5 @@
+products:{"sp1":{"name":"魅族 16s Pro","num":9,"tips":"全网通公开版 黑之秘境 8+128GB","price":2999,"src":"./img/cart-19.png"},"sp2":{"name":"PANDAER GAME START 副本晴雨伞","num":1,"tips":"GAME START","price":209,"src":"./img/cart-20.png"},"sp3":{"name":"PANDAER × XOG 白金星舟耳机","num":19,"tips":"白金星舟","price":50,"src":"img/cart-18.png"}}
+
+logined:12132324345;
+
+这是测试数据，可以使用该数据进行测试。
